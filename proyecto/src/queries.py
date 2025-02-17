@@ -10,9 +10,10 @@ POLYGON_QUERY = """
         id_localizacion,
         geometry_type,
         direccion,
+        geojson_geometry,
         latitud,
         longitud
-    FROM public.reporte_problematica_polygon_denormalizado
+    FROM public.reporte_problematica_polygon_denormalizado_with_geojson
     ORDER BY id_reporte;
 """
 
@@ -28,8 +29,9 @@ POINT_QUERY = """
         id_localizacion,
         geometry_type,
         direccion,
+        geojson_geometry,
         latitud,
         longitud
-    FROM public.reporte_problematica_punto_direccion_denormalizado
+    FROM public.reporte_problematica_punto_direccion_denormalizado_with_geojson
     ORDER BY id_reporte;
 """
